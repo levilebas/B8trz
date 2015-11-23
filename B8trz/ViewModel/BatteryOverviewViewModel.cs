@@ -25,7 +25,7 @@ namespace B8trz.ViewModel
 
         private int GetBatteryRemaining()
         {
-            return (int)_battery.RemainingDischargeTime.Minutes;
+            return (int)_battery.RemainingDischargeTime.TotalMinutes;
         }
     }
 }
