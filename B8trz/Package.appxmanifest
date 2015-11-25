@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="9da66d73-ed4f-4c74-a68c-650db9dd5c1b" Publisher="CN=levil_000" Version="1.0.0.4" />
+  <Identity Name="9da66d73-ed4f-4c74-a68c-650db9dd5c1b" Publisher="CN=levil_000" Version="1.0.0.5" />
   <mp:PhoneIdentity PhoneProductId="9da66d73-ed4f-4c74-a68c-650db9dd5c1b" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>B8trz</DisplayName>
@@ -16,11 +16,10 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="B8trz.App">
-      <m3:VisualElements DisplayName="B8trz" Square150x150Logo="Assets\battery_discharging_100_150px.png" Square44x44Logo="Assets\SmallLogo.png" Description="Retrives information about the battery on the device" ForegroundText="light" BackgroundColor="transparent" ToastCapable="false">
-        <m3:LockScreen Notification="badgeAndTileText" BadgeLogo="Assets\battery_discharging_100_24px.png" />
-        <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\battery_discharging_100.png">
+      <m3:VisualElements DisplayName="B8TRZ" Square150x150Logo="Assets\battery_discharging_100_150px.png" Square44x44Logo="Assets\SmallLogo.png" Description="Retrives information about the battery on the device" ForegroundText="light" BackgroundColor="transparent" ToastCapable="false">
+        <m3:LockScreen Notification="badgeAndTileText" BadgeLogo="Assets\wp81-icon-58px.png" />
+        <m3:DefaultTile Wide310x150Logo="Assets\wp81-tile-744x360px.png" Square71x71Logo="Assets\wp81-icon-170px.png">
         </m3:DefaultTile>
-        <m3:SplashScreen Image="Assets\SplashScreen.png" />
       </m3:VisualElements>
       <Extensions>
         <Extension Category="windows.backgroundTasks" EntryPoint="B8trz.App">
