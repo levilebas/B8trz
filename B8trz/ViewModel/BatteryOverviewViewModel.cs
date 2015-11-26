@@ -14,6 +14,7 @@ namespace B8trz.ViewModel
             Battery = new Battery
             {
                 BatteryLevelPercentage = GetBatteryLevelPercentage(),
+                //BatteryLevelPercentage = new Random().Next(1, 100),
                 BatteryRemaining = GetBatteryRemaining()
             };
         }
@@ -23,9 +24,10 @@ namespace B8trz.ViewModel
             return _battery.RemainingChargePercent;
         }
 
-        private int GetBatteryRemaining()
+        private string GetBatteryRemaining()
         {
-            return (int)_battery.RemainingDischargeTime.TotalMinutes;
+            TimeSpan remaining = _battery.RemainingDischargeTime;
+            return string.Format("{0}h:{1}m", remaining.Hours, remaining.Minutes);
         }
     }
 }

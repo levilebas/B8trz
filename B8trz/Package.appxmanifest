@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="9da66d73-ed4f-4c74-a68c-650db9dd5c1b" Publisher="CN=levil_000" Version="1.0.0.5" />
+  <Identity Name="9da66d73-ed4f-4c74-a68c-650db9dd5c1b" Publisher="CN=levil_000" Version="1.0.0.7" />
   <mp:PhoneIdentity PhoneProductId="9da66d73-ed4f-4c74-a68c-650db9dd5c1b" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>B8trz</DisplayName>
@@ -22,9 +22,9 @@
         </m3:DefaultTile>
       </m3:VisualElements>
       <Extensions>
-        <Extension Category="windows.backgroundTasks" EntryPoint="B8trz.App">
+        <Extension Category="windows.backgroundTasks" EntryPoint="B8trz.Utility.TileBackgroundTask">
           <BackgroundTasks>
-            <Task Type="pushNotification" />
+            <Task Type="timer" />
           </BackgroundTasks>
         </Extension>
       </Extensions>

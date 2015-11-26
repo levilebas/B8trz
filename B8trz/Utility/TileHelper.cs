@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 using Windows.Data.Xml.Dom;
 using Windows.UI.Notifications;
 
-namespace B8trz.Common
+namespace B8trz.Utility
 {
     public class TileHelper
     {
-        public static void SetupTiles(int charge, int remaining)
+        public static void SetupTiles(int charge, string remaining)
         {
             TileUpdateManager.CreateTileUpdaterForApplication().Clear();
             TileUpdateManager.CreateTileUpdaterForApplication().EnableNotificationQueue(true);
@@ -18,14 +14,14 @@ namespace B8trz.Common
             var tileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150Text01);
 
             XmlNodeList tileTextAttributes = tileXml.GetElementsByTagName("text");
-            tileTextAttributes[0].InnerText = "Battery Level";
+            tileTextAttributes[0].InnerText = "Charge Level";
             tileTextAttributes[1].InnerText = charge.ToString();
             var tileNotification = new TileNotification(tileXml);
             TileUpdateManager.CreateTileUpdaterForApplication().Update(tileNotification);
 
-            tileTextAttributes[0].InnerText = "Minutes Remaining";
-            tileTextAttributes[1].InnerText = remaining.ToString();
-            tileNotification = new TileNotification(tileXml) {Tag = "myTag"};
+            tileTextAttributes[0].InnerText = "Charge Remaining";
+            tileTextAttributes[1].InnerText = remaining;
+            tileNotification = new TileNotification(tileXml) {Tag = "timeRemaining"};
             TileUpdateManager.CreateTileUpdaterForApplication().Update(tileNotification);
         }
 
@@ -36,9 +32,6 @@ namespace B8trz.Common
             badgeDOM.LoadXml(badgeXmlString);
             BadgeNotification badge = new BadgeNotification(badgeDOM);
             BadgeUpdateManager.CreateBadgeUpdaterForApplication().Update(badge);
-            
         }
-
-
     }
 }

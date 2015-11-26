@@ -3,6 +3,6 @@
     public class Battery
     {
         public int BatteryLevelPercentage { get; set; }
-        public int BatteryRemaining { get; set; }
+        public string BatteryRemaining { get; set; }
     }
 }

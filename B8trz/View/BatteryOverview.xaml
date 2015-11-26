@@ -36,17 +36,15 @@
                 <ColumnDefinition Width="41*"/>
             </Grid.ColumnDefinitions>
             <TextBlock Style="{ThemeResource TitleTextBlockStyle}" Margin="10,0,-12,5.418" Grid.ColumnSpan="2" d:LayoutOverrides="LeftMargin, RightMargin, TopPosition, BottomPosition">
-            	<Run Text="Percentage"/>
+            	<Run Text="Charge Level"/>
             	<Run Text=":"/>
             </TextBlock>
             <TextBlock Text="{Binding Battery.BatteryLevelPercentage}" Style="{ThemeResource TitleTextBlockStyle}" Margin="10,0,-12,5.418" d:LayoutOverrides="LeftMargin, RightMargin, TopPosition, BottomPosition" Grid.Column="1" d:DataContext="{d:DesignData /SampleData/BatteryOverviewViewModelSampleData.xaml}"/>
             <TextBlock Style="{ThemeResource TitleTextBlockStyle}" Margin="10,-0.418,-12,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="24" d:LayoutOverrides="LeftMargin, RightMargin" Grid.Row="1">
-            	<Run Text="Minutes Remaining"/>
+            	<Run Text="Charge Remaining"/>
             	<Run Text=":"/>
             </TextBlock>
             <TextBlock Text="{Binding Battery.BatteryRemaining}" Style="{ThemeResource TitleTextBlockStyle}" Margin="10,-0.418,-12,0" VerticalAlignment="Top" Height="24" Grid.Column="1" d:LayoutOverrides="LeftMargin, RightMargin" Grid.Row="1" d:DataContext="{d:DesignData /SampleData/BatteryOverviewViewModelSampleData.xaml}"/>
         </Grid>
-
-        <!--TODO: Content should be placed within the following grid-->
     </Grid>
 </Page>

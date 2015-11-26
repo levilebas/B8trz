@@ -95,7 +95,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Common\TileHelper.cs" />
+    <Compile Include="Utility\TileBackgroundTask.cs" />
+    <Compile Include="Utility\TileHelper.cs" />
     <Compile Include="View\BatteryOverview.xaml.cs">
       <DependentUpon>BatteryOverview.xaml</DependentUpon>
     </Compile>
