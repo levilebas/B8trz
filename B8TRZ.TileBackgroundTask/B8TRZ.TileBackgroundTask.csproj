@@ -4,21 +4,20 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{91435579-58FB-4672-961A-6A189A875051}</ProjectGuid>
-    <OutputType>AppContainerExe</OutputType>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E0DD2C4B-4D65-49F5-A8AD-263C85770472}</ProjectGuid>
+    <OutputType>winmdobj</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>B8trz</RootNamespace>
-    <AssemblyName>B8trz</AssemblyName>
+    <RootNamespace>B8TRZ.TileBackgroundTask</RootNamespace>
+    <AssemblyName>B8TRZ.TileBackgroundTask</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformVersion>8.1</TargetPlatformVersion>
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{76F1466A-8B6D-4E39-A767-685A06062A39};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
-    <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -28,7 +27,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -82,69 +80,14 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <DesignData Include="SampleData\BatteryOverviewViewModelSampleData.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </DesignData>
-    <Page Include="View\BatteryOverview.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\BatteryOverview.xaml.cs">
-      <DependentUpon>BatteryOverview.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Common\NavigationHelper.cs" />
-    <Compile Include="Common\ObservableDictionary.cs" />
-    <Compile Include="Common\RelayCommand.cs" />
-    <Compile Include="Common\SuspensionManager.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <AppxManifest Include="Package.appxmanifest">
-      <SubType>Designer</SubType>
-    </AppxManifest>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Assets\battery_discharging_100_150px.scale-240.png" />
-    <Content Include="Assets\SmallLogo.scale-240.png" />
-    <Content Include="Assets\StoreLogo.scale-240.png" />
-    <Content Include="Assets\wp81-icon-106px.png" />
-    <Content Include="Assets\wp81-icon-120px.png" />
-    <Content Include="Assets\wp81-icon-170px.scale-240.png" />
-    <Content Include="Assets\wp81-icon-300px.png" />
-    <Content Include="Assets\wp81-icon-58px.scale-240.png" />
-    <Content Include="Assets\wp81-tile-360x360px.png" />
-    <Content Include="Assets\wp81-tile-744x360px.scale-240.png" />
-    <Content Include="Common\ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
-  </ItemGroup>
-  <ItemGroup>
-    <PRIResource Include="Strings\en-US\Resources.resw">
-      <SubType>Designer</SubType>
-    </PRIResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Strings\SampleData\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\B8TRZ.Portable\B8TRZ.Portable.csproj">
       <Project>{640cab42-cc24-4b84-8f76-da4012d196a0}</Project>
       <Name>B8TRZ.Portable</Name>
     </ProjectReference>
-    <ProjectReference Include="..\B8TRZ.TileBackgroundTask\B8TRZ.TileBackgroundTask.csproj">
-      <Project>{e0dd2c4b-4d65-49f5-a8ad-263c85770472}</Project>
-      <Name>B8TRZ.TileBackgroundTask</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TileBackgroundTask.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>

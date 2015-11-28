@@ -1,8 +1,7 @@
-﻿using System.IO;
-using Windows.Data.Xml.Dom;
+﻿using Windows.Data.Xml.Dom;
 using Windows.UI.Notifications;
 
-namespace B8trz.Utility
+namespace B8TRZ.Portable.Utility
 {
     public class TileHelper
     {

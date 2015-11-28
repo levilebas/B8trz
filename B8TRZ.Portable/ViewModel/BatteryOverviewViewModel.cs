@@ -1,7 +1,7 @@
 ﻿using System;
-using B8trz.Model;
+using Battery = B8TRZ.Portable.Model.Battery;
 
-namespace B8trz.ViewModel
+namespace B8TRZ.Portable.ViewModel
 {
     public class BatteryOverviewViewModel
     {

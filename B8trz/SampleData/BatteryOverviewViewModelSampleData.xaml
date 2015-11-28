@@ -1,4 +1,4 @@
-﻿<ViewModel:BatteryOverviewViewModel xmlns:ViewModel="using:B8trz.ViewModel" xmlns:Model="using:B8trz.Model">
+﻿<ViewModel:BatteryOverviewViewModel>
 	<ViewModel:BatteryOverviewViewModel.Battery>
 		<Model:Battery BatteryLevelPercentage="27" BatteryRemaining="65"/>
 	</ViewModel:BatteryOverviewViewModel.Battery>

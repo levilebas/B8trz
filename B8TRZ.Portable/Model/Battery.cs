@@ -1,4 +1,4 @@
-﻿namespace B8trz.Model
+﻿namespace B8TRZ.Portable.Model
 {
     public class Battery
     {

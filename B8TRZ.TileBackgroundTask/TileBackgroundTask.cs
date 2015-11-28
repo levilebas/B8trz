@@ -1,9 +1,8 @@
-﻿using System;
-using Windows.ApplicationModel.Background;
-using Windows.UI.Popups;
-using B8trz.ViewModel;
+﻿using Windows.ApplicationModel.Background;
+using B8TRZ.Portable.Utility;
+using B8TRZ.Portable.ViewModel;
 
-namespace B8trz.Utility
+namespace B8TRZ.TileBackgroundTask
 {
     public sealed class TileBackgroundTask : IBackgroundTask
     {

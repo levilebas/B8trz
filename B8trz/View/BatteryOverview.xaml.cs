@@ -1,10 +1,9 @@
 ﻿using System;
+using System.Linq;
 using Windows.ApplicationModel.Background;
-using Windows.UI.Popups;
 using Windows.UI.Xaml.Controls;
-using B8trz.Common;
-using B8trz.Utility;
-using B8trz.ViewModel;
+using B8TRZ.Portable.Utility;
+using B8TRZ.Portable.ViewModel;
 
 namespace B8trz
 {
@@ -26,20 +25,19 @@ namespace B8trz
         private async void RegisterTileBackgroundTask()
         {
             string myTaskName = "TileBackgroundTask";
+            string taskEntryPoint = "B8TRZ.TileBackgroundTask.TileBackgroundTask";
 
             // check if task is already registered
-            foreach (var cur in BackgroundTaskRegistration.AllTasks)
-                if (cur.Value.Name == myTaskName)
-                {
-                    //await (new MessageDialog("Task already registered")).ShowAsync();
-                    return;
-                }
+            if (BackgroundTaskRegistration.AllTasks.Any(cur => cur.Value.Name == myTaskName))
+            {
+                return;
+            }
 
             // Windows Phone app must call this to use trigger types (see MSDN)
             await BackgroundExecutionManager.RequestAccessAsync();
 
             // register a new task
-            BackgroundTaskBuilder taskBuilder = new BackgroundTaskBuilder { Name = "TileBackgroundTask", TaskEntryPoint = "B8trz.Utility.TileBackgroundTask" };
+            BackgroundTaskBuilder taskBuilder = new BackgroundTaskBuilder { Name = myTaskName, TaskEntryPoint = taskEntryPoint };
             taskBuilder.SetTrigger(new TimeTrigger(30, false));
             BackgroundTaskRegistration myFirstTask = taskBuilder.Register();
 

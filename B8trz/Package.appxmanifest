@@ -22,7 +22,7 @@
         </m3:DefaultTile>
       </m3:VisualElements>
       <Extensions>
-        <Extension Category="windows.backgroundTasks" EntryPoint="B8trz.Utility.TileBackgroundTask">
+        <Extension Category="windows.backgroundTasks" EntryPoint="B8TRZ.TileBackgroundTask.TileBackgroundTask">
           <BackgroundTasks>
             <Task Type="timer" />
           </BackgroundTasks>
