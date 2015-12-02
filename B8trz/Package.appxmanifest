@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="9da66d73-ed4f-4c74-a68c-650db9dd5c1b" Publisher="CN=levil_000" Version="1.0.0.8" />
-  <mp:PhoneIdentity PhoneProductId="9da66d73-ed4f-4c74-a68c-650db9dd5c1b" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="56298MeanIssh.B8TRZ" Publisher="CN=A27CF304-B478-4DFA-A8BC-EB9FACB3F0E2" Version="1.1.0.1" />
+  <mp:PhoneIdentity PhoneProductId="ba2ff3cc-ff4c-4596-ae2b-b06cf66289e0" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>B8trz</DisplayName>
-    <PublisherDisplayName>levil_000</PublisherDisplayName>
+    <DisplayName>B8TRZ</DisplayName>
+    <PublisherDisplayName>MeanIssh</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
@@ -16,10 +16,13 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="B8trz.App">
-      <m3:VisualElements DisplayName="B8TRZ" Square150x150Logo="Assets\battery_discharging_100_150px.png" Square44x44Logo="Assets\SmallLogo.png" Description="Retrives information about the battery on the device" ForegroundText="light" BackgroundColor="transparent" ToastCapable="false">
+      <m3:VisualElements DisplayName="B8TRZ" Square150x150Logo="Assets\battery_discharging_100_150px.png" Square44x44Logo="Assets\SmallLogo.png" Description="Simple utility app to display the battery charge percentage on the lock screen or live tile." ForegroundText="light" BackgroundColor="transparent" ToastCapable="false">
         <m3:LockScreen Notification="badgeAndTileText" BadgeLogo="Assets\wp81-icon-58px.png" />
         <m3:DefaultTile Wide310x150Logo="Assets\wp81-tile-744x360px.png" Square71x71Logo="Assets\wp81-icon-170px.png">
         </m3:DefaultTile>
+        <m3:InitialRotationPreference>
+          <m3:Rotation Preference="portrait" />
+        </m3:InitialRotationPreference>
       </m3:VisualElements>
       <Extensions>
         <Extension Category="windows.backgroundTasks" EntryPoint="B8TRZ.TileBackgroundTask.TileBackgroundTask">
@@ -30,7 +33,4 @@
       </Extensions>
     </Application>
   </Applications>
-  <Capabilities>
-    <Capability Name="internetClientServer" />
-  </Capabilities>
 </Package>
