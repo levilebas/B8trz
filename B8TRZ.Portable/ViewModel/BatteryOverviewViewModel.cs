@@ -14,7 +14,6 @@ namespace B8TRZ.Portable.ViewModel
             Battery = new Battery
             {
                 BatteryLevelPercentage = GetBatteryLevelPercentage(),
-                //BatteryLevelPercentage = new Random().Next(1, 100),
                 BatteryRemaining = GetBatteryRemaining()
             };
         }
